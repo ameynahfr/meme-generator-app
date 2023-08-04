@@ -21,6 +21,8 @@ body {
 }
 
 .background-container {
+    display: flex;
+    justify-content: centre;
     position: fixed;
     top: 0;
     left: 0;
