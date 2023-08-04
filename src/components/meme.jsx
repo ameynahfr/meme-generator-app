@@ -1,5 +1,6 @@
 import React from 'react';
 import { exportComponentAsJPEG } from 'react-component-export-image'
+import image from './download.svg'
 
 export default function Meme() {
     const [meme, setMeme] = React.useState({
@@ -67,17 +68,17 @@ export default function Meme() {
                     Get new meme 🖼
                 </button>
             </div>
-            <div ref={memeReference} className='Meme-Text-Image'>
-                <img className='memeImage' src={meme.randomImage} alt="Meme" />
-                <h2 className='meme-text top' >{meme.topText}</h2>
-                <h2 className='meme-text bottom'> {meme.bottomText}</h2>
-            </div>
-            <div className='save-btn-div'>
+            <div className='memeDisplay'>
+                <div ref={memeReference} className='Meme-Text-Image'>
+                    <img className='memeImage' src={meme.randomImage} alt="Meme" />
+                    <h2 className='meme-text top' >{meme.topText}</h2>
+                    <h2 className='meme-text bottom'> {meme.bottomText}</h2>
+                </div>
                 <button
                     className='save-btn'
                     onClick={() => exportComponentAsJPEG(memeReference)}
                 >
-                    Download
+                    <img src={image} alt='download'></img>
                 </button>
             </div>
         </main>
