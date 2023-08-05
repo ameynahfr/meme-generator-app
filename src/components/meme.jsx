@@ -43,6 +43,7 @@ export default function Meme() {
 
     return (
         <main>
+            <div className='app-container'>
             <div className='form'>
                 <input
                     className='search-meme'
@@ -80,6 +81,7 @@ export default function Meme() {
                 >
                     <img src={image} alt='download'></img>
                 </button>
+            </div>
             </div>
         </main>
     )
